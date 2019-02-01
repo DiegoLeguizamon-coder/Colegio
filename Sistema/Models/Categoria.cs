@@ -12,7 +12,7 @@ namespace Sistema.Models
         [Required (ErrorMessage = "Campo Requerido")]
         [StringLength (50, MinimumLength = 3, ErrorMessage = "El nombre debe tener entre 3 a 50 Caracteres")]
         public String Nombre { get; set;}
-        [StringLength(256, ErrorMessage = "La descripcion no debe exceder 256 caracteres")]
+        [StringLength(256, ErrorMessage = "La descrip debe exceder 256 caracteres")]
         [Display (Name = "Descripción")]
         public String Descripcion { get; set; }
         public Boolean Estado { get; set; }
