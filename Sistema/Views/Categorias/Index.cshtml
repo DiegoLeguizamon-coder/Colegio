@@ -4,19 +4,19 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<h2>Categoría Cursos</h2>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create"><button class="btn btn-primary">Nueva Categoría</button></a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Nombre)
+                <a asp-action="index" asp-route-sortOrder="@ViewData["nombreSortParm"]">@Html.DisplayNameFor(model => model.Nombre)</a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Descripcion)
+                <a asp-action="index" asp-route-sortOrder="ViewData["DescripcionSortParm"]">@Html.DisplayNameFor(model => model.Descripcion)</a>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Estado)
@@ -37,9 +37,9 @@
                 @Html.DisplayFor(modelItem => item.Estado)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.CategoriaId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.CategoriaId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.CategoriaId">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.CategoriaId">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.CategoriaId">Detalle</a> |
+                <a asp-action="Delete" asp-route-id="@item.CategoriaId">Eliminar</a>
             </td>
         </tr>
 }
